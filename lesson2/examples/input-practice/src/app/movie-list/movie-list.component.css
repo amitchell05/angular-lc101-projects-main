@@ -1,11 +1,15 @@
 .movies {
-    color: purple;
- }
- 
- h3 {
-    text-align: center;
- }
+  color: purple;
+}
 
- .center {
-    text-align: center;
- }
+h3 {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
