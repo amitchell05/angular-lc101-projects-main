@@ -1,18 +1,32 @@
 .chores {
-    color: #ff4f33;
+  color: #ff4f33;
 }
 
 .doneChores {
-    color: #3c79b8;
+  color: #3c79b8;
 }
 
 h3 {
-    text-align: center;
+  text-align: center;
 }
 
 img {
-    max-width: 15%;
-    height: auto;
-    display: block;
-    margin: auto;
+  max-width: 15%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.warning {
+  color: magenta;
+}
+
+.earnTreat {
+  color: forestgreen;
+  text-align: center;
+}
+
+#treat {
+  text-align: center;
+  color: forestgreen;
 }
