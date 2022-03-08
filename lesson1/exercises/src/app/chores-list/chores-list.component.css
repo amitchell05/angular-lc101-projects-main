@@ -1,0 +1,14 @@
+.chores {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  color: green;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+li {
+  font-style: italic;
+}
