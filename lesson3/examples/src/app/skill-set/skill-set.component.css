@@ -1,8 +1,19 @@
 h3 {
-   text-align: center;
-   text-decoration: underline;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .skills {
-   color: green;
+  color: green;
+}
+
+.ol-style {
+  color: black;
+  text-align: center;
+  list-style-type: upper-roman;
+}
+
+.p-style {
+  color: blue;
+  text-align: right;
 }

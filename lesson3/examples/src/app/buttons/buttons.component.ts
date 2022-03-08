@@ -1,16 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-   selector: 'buttons',
-   templateUrl: './buttons.component.html',
-   styleUrls: ['./buttons.component.css']
+  selector: "buttons",
+  templateUrl: "./buttons.component.html",
+  styleUrls: ["./buttons.component.css"],
 })
 export class ButtonsComponent implements OnInit {
-   buttonHeading: string = "Buttons"
-   inactive: boolean = false;
+  buttonHeading: string = "Buttons";
+  jokeHeading: string = "Joke Buttons";
+  goldInactive: boolean = false;
+  silverInactive: boolean = false;
+  copperInactive: boolean = false;
 
-   constructor() { }
+  constructor() {}
 
-   ngOnInit() { }
+  ngOnInit(): void {}
 
+  toggleActivation() {
+    this.goldInactive = !this.goldInactive;
+    this.silverInactive = !this.silverInactive;
+    this.copperInactive = !this.copperInactive;
+  }
 }
