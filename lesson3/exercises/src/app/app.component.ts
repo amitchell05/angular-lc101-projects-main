@@ -14,6 +14,11 @@ export class AppComponent {
   message = "Space shuttle ready for takeoff!";
   takeOffEnabled: boolean = false;
 
+  atLeft: boolean = false;
+  atRight: boolean = false;
+  atTop: boolean = false;
+  atBottom: boolean = false;
+
   handleTakeOff(rocket) {
     let result = window.confirm(
       "Are you sure the shuttle is ready for takeoff?"
@@ -85,7 +90,13 @@ export class AppComponent {
   }
 
   rocketCloseToEdge() {
-    console.log(this.height);
+    console.log("Height", this.height);
+    console.log("Width", this.width);
+    this.atTop = this.height === 330000;
+    this.atBottom = this.height === 0;
+    this.atRight = this.width === 470000;
+    this.atLeft = this.width === -20000;
+
     if (this.height === 0 || this.height === 330000) {
       this.color = "orange";
       return true;

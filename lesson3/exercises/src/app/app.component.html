@@ -30,10 +30,18 @@
 
     <div class="col-3">
       <div class="container-right" *ngIf="takeOffEnabled">
-        <button (click)="moveRocket(rocketImage, 'up')">Up</button>
-        <button (click)="moveRocket(rocketImage, 'down')">Down</button>
-        <button (click)="moveRocket(rocketImage, 'right')">Right</button>
-        <button (click)="moveRocket(rocketImage, 'left')">Left</button>
+        <button (click)="moveRocket(rocketImage, 'up')" [disabled]="atTop">
+          Up
+        </button>
+        <button (click)="moveRocket(rocketImage, 'down')" [disabled]="atBottom">
+          Down
+        </button>
+        <button (click)="moveRocket(rocketImage, 'right')" [disabled]="atRight">
+          Right
+        </button>
+        <button (click)="moveRocket(rocketImage, 'left')" [disabled]="atLeft">
+          Left
+        </button>
       </div>
       <div class="container-right">
         <h3>Space Shuttle Height</h3>
