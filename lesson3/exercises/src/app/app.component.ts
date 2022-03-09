@@ -54,21 +54,29 @@ export class AppComponent {
     let movement = "";
 
     if (direction === "left") {
-      movement = parseInt(rocket.style.left) + 10 + "px";
-      rocket.style.left = movement;
-      this.width -= 10000;
+      if (this.width - 10000 > -30000) {
+        movement = parseInt(rocket.style.left) - 10 + "px";
+        rocket.style.left = movement;
+        this.width -= 10000;
+      }
     } else if (direction === "right") {
-      movement = parseInt(rocket.style.left) - 10 + "px";
-      this.width += 10000;
-      rocket.style.left = movement;
+      if (this.width + 10000 < 480000) {
+        movement = parseInt(rocket.style.left) + 10 + "px";
+        rocket.style.left = movement;
+        this.width += 10000;
+      }
     } else if (direction === "up") {
-      movement = parseInt(rocket.style.bottom) + 10 + "px";
-      rocket.style.bottom = movement;
-      this.height += 10000;
+      if (this.height + 10000 < 340000) {
+        movement = parseInt(rocket.style.bottom) + 10 + "px";
+        rocket.style.bottom = movement;
+        this.height += 10000;
+      }
     } else if (direction === "down") {
-      movement = parseInt(rocket.style.bottom) - 10 + "px";
-      rocket.style.bottom = movement;
-      this.height -= 10000;
+      if (this.height - 10000 > -1) {
+        movement = parseInt(rocket.style.bottom) - 10 + "px";
+        rocket.style.bottom = movement;
+        this.height -= 10000;
+      }
     }
 
     this.rocketCloseToEdge();
@@ -77,10 +85,11 @@ export class AppComponent {
   }
 
   rocketCloseToEdge() {
+    console.log(this.height);
     if (this.height === 0 || this.height === 330000) {
       this.color = "orange";
       return true;
-    } else if (this.width === 20000 || this.width === -380000) {
+    } else if (this.width === -20000 || this.width === 470000) {
       this.color = "orange";
       return true;
     }
